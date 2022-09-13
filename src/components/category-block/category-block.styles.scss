@@ -1,0 +1,109 @@
+@import '../../helper.scss';
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+
+  .card {
+    position: relative;
+    img {
+      width: 100%;
+      display: none;
+    }
+    a .content {
+      position: absolute;
+      bottom: 0;
+      background-color: #10504F;
+      width: 100%;
+      text-align: center;
+
+      span {
+        font-family: 'Pacifico';
+        color: white;
+      } 
+    }
+  }
+}
+
+@include query-small {
+  .categories {
+    .card {
+      height: 210px;
+    }
+  }
+}
+
+@include query-medium {
+  .categories {
+    .card {
+      height: 400px;
+    }
+  }
+}
+
+@include query-medium-down {
+  .categories {
+    flex-wrap: wrap;
+
+    .card-1 {
+      background-image: url(../../assets/Image-Womens.png);
+    }
+    .card-2 {
+      background-image: url(../../assets/Image-Mens.png);
+    }
+    .card-3 {
+      background-image: url(../../assets/Image-Accessories.png);
+    }
+
+    .card {
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: calc(50% - 5px);
+
+      a .content {
+        position: absolute;
+        bottom: 0;
+        background-color: #10504F;
+        width: 100%;
+        text-align: center;
+        padding: 6.5px 0;
+  
+        span {
+          font-size: 20px;
+        } 
+      }
+    }
+    .card:first-child {
+      margin-right: 10px;
+    }
+    .card:last-child {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+
+}
+
+@include query-large-up {
+  .categories {
+    flex-wrap: nowrap;
+    .card {
+      width: 33%;
+      padding: 0 10px;
+      img {
+        width: 100%;
+        display: block;
+      }
+      a .content {
+        padding: 10px 0;
+        width: calc(100% - 20px);
+        span {
+          font-size: 40px;          
+        } 
+      }
+    }
+  }
+
+
+}

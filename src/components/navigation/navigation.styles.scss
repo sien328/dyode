@@ -1,0 +1,96 @@
+@import '../../helper.scss';
+
+.navigation {
+  .shipping-message {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+  } 
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    height: 64px;
+    background-color: #10504F;
+
+    .logo {
+      position: absolute;
+    }
+
+    .tabs {
+      display: none;
+    }
+
+    .tab {
+      color: white;
+      padding: 0 20px;
+      text-transform: uppercase;
+    }
+
+    .utils {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+        a {
+          padding: 15px; 
+        }
+    }
+  }
+}
+
+@include query-medium-down {
+  .navigation {
+    .shipping-message {
+      line-height: 46px;
+      height: 46px;
+    }
+    .navbar {
+      .dropdown-stack {
+        position: absolute;
+        left: 20px ;
+      }
+
+      .logo {
+        left: 50px;
+        transform: scale(0.6);
+      }
+      .utils {
+        right: 23px;
+      }
+    }  
+  }
+  
+}
+
+
+@include query-medium-up {
+  .navigation {
+    .shipping-message {
+      line-height: 58px;
+      height: 58px;
+    }
+    .navbar {
+      height: 138px;
+
+      .dropdown-stack {
+        display: none;
+      }
+      .logo {
+        left: 37px ;
+      }  
+
+      .tabs {
+        display: block;
+      }
+      .utils {
+        right: 48px;
+      }
+    }  
+  }
+}

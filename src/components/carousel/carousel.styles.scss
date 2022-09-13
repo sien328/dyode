@@ -1,0 +1,124 @@
+@import "../../helper.scss";
+.hero {
+  .slick-initialized { overflow: hidden; }
+  
+  .slick-slider {
+    .slick-dots {
+      li.slick-active button:before {
+        opacity: 0.75;
+        color: white;
+      }
+    }
+
+    .slide {
+      width: 100%;
+
+      &-1 {
+        .title,
+        .subtext {
+          color: #10504f;
+        }
+      }
+
+      .title {
+        font-family: "Pacifico";
+      }
+      button {
+        background: black;
+        padding: 12px 25px;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+        border: 1px solid black;
+      }
+    }
+
+    @include query-medium-down {
+      .slick-dots {
+        position: absolute;
+        bottom: 200px;
+        li button:before {
+          font-size: 10px;
+        }
+      }
+      .slide {
+        &-2,
+        &-3 {
+          .title,
+          .subtext {
+            color: black;
+          }
+        }
+
+        .hero-image {
+          width: 100%;
+        }
+        .content {
+          text-align: center;
+          background: #efefef;
+          padding: 20px 20px 40px;
+        }
+        .title {
+          font-size: 26px;
+        }
+        .subtext {
+          font-size: 14px;
+          line-height: 17px;
+          margin: 10px 0 20px;
+        }
+      }
+    }
+
+    @include query-medium-up {
+      .slick-dots {
+        position: absolute;
+        bottom: 20px;
+        li button:before {
+          font-size: 18px;
+        }
+      }
+      .slide {
+        height: 638px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        &-2,
+        &-3 {
+          .title,
+          .subtext {
+            color: white;
+          }
+        }
+
+        .hero-image {
+          display: none;
+        }
+        .content {
+          background: transparent;
+          position: absolute;
+          top: 50%;
+          left: 10%;
+          transform: translate(0, -50%);
+        }
+        .title {
+          font-size: 60px;
+        }
+        .subtext {
+          font-size: 26px;
+          line-height: 31px;
+          margin: 20px 0 25px;
+        }
+      }
+      .slide-1 {
+        background-image: url(../../assets/Hero-Image-1.png);
+      }
+      .slide-2 {
+        background-image: url(../../assets/Hero-Image-2.png);
+      }
+      .slide-3 {
+        background-image: url(../../assets/Hero-Image-3.png);
+      }
+    }
+  }
+}

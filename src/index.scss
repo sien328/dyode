@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: 'Lato' ,'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: unset;
+}
+
+p, h2, h3 {
+  margin: 0 0;
+}
+
+img {
+  display: block;
+}

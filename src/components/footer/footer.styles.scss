@@ -1,0 +1,97 @@
+@import "../../helper.scss";
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  background-color: black;
+  color: white;
+  padding: 20px 20px 30px;
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0 30px;
+    &.hide {
+      display: none;
+    }
+  }
+  .title {
+    font-family: "Pacifico";
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 10px;
+    padding: 0 30px;
+  }
+  span {
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .SS {
+    display: flex;
+    padding: 0 30px;
+  }
+  
+}
+
+@include query-medium-down {
+  .footer {
+    flex-direction: column;
+    flex-wrap: unset;
+    .title {
+      font-family: "Pacifico";
+      font-size: 22px;
+      line-height: 39px;
+      margin-bottom: 10px;
+      &.drop-icon-plus::after {
+        content: "+";
+        position: absolute;
+        right: 40px;
+      }
+      &.drop-icon-minus::after {
+        content: "-";
+        position: absolute;
+        right: 40px;
+      }
+    }
+    span {
+      font-size: 12px;
+      line-height: 30px;
+    }
+    .SS {
+      img {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+@include query-large-up {
+  .footer {
+    flex-wrap: nowrap;
+    .title {
+      font-size: 22px;
+      line-height: 39px;
+      margin-bottom: 10px;
+    }
+    .column {
+      &.hide {
+        display: flex;
+      }
+    }
+    span {
+      font-size: 18px;
+      line-height: 40px;
+    }
+    .SS {
+      display: flex;
+      justify-content: space-around;
+    }
+    div:last-of-type {
+      margin-left: auto;
+    }
+  }
+}

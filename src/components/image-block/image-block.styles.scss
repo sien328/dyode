@@ -1,0 +1,92 @@
+@import "../../helper.scss";
+
+.image-block {
+  .slide {
+    max-height: 638px;
+    width: 100%;
+    position: relative;
+
+    .title {
+      font-family: "Pacifico";
+    }
+    .subtext {
+      font-size: 26px;
+      line-height: 31px;
+      margin: 20px 0 25px;
+    }
+    button {
+      padding: 12px 25px;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+}
+
+@include query-medium-down {
+  .image-block {
+    .slide {
+      .hero-image {
+        display: block;
+        width: 100%;
+      }
+      .title {
+        color: #10504f;
+        font-size: 26px;
+      }
+      .subtext {
+        color: #10504f;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 3px 0 20px;
+      }
+      .content {
+        text-align: center;
+        background: #efefef;
+        padding: 20px 20px 40px;
+      }
+      button {
+        background: black;
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+@include query-large-up {
+  .image-block {
+    .slide {
+      height: 638px;
+      background-image: url(../../assets/Hero-Image-4.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .hero-image {
+        display: none;
+      }
+
+      .content {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        transform: translate(0, -50%);
+        color: white;
+      }
+
+      .title {
+        font-size: 60px;
+      }
+
+      .subtext {
+        font-size: 26px;
+        line-height: 31px;
+        margin: 20px 0 25px;
+      }
+
+      button {
+        background: #10504f;
+        border: 1px solid #10504f;
+      }
+    }
+  }
+}

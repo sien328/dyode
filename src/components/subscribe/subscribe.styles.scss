@@ -1,0 +1,121 @@
+@import "../../helper.scss";
+
+.subscribe {
+  background-color: #10504f;
+  .title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    span {
+      font-family: "Pacifico";
+      font-weight: 400;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    p {
+      color: white;
+      font-weight: 400;
+    }
+    form {
+      display: flex;
+      flex-direction: row;
+      input {
+        width: 100%;
+      }
+      button {
+        height: 54px;
+        background: transparent;
+        border: 1px solid white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: 0.1em;
+        color: white;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+@include query-medium-down {
+  .subscribe {
+    padding: 30px 40px;
+    .title {
+      margin-bottom: 15px;
+      img {
+        transform: scale(0.6);
+      }
+      span {
+        font-size: 20px;
+        line-height: 35px;
+      }
+    }
+    .content {
+      flex-wrap: wrap;
+      p {
+        text-align: center;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      form {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        input {
+          width: 100%;
+          max-width: 250px;
+          height: 40px;
+          margin-top: 20px;
+          padding: 0 15px;
+        }
+        button {
+          margin-top: 20px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@include query-large-up {
+  .subscribe {
+    padding: 75px 50px;
+    .title {
+      margin-bottom: 30px;
+
+      span {
+        font-size: 40px;
+        line-height: 70px;
+        padding: 0 10px;
+      }
+    }
+    .content {
+      flex-wrap: nowrap;
+      p {
+        width: 56%;
+        font-size: 22px;
+        line-height: 26px;
+        padding-right: 20px;
+      }
+      form {
+        flex-wrap: nowrap;
+        min-width: 40%;
+        input {
+          min-width: 300px;
+          height: 50px;
+          padding: 0 10px;
+        }
+        button {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
